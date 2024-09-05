@@ -14,7 +14,7 @@ OBJ =  module.o sparse.o wt_aux.o math_lib.o symmetry.o \
 		main.o
 
 # compiler
-F90  = mpif90 -fpp -DMPI -fpe3 -O3 -DARPACK -DINTELMKL # -check all -traceback -g
+F90  = mpiifx -fpp -DMPI -fpe3 -O3 -DARPACK -DINTELMKL # -check all -traceback -g
 #F90  = ifort -fpp  -DINTELMKL -fpe3 -check all -traceback -g
 CC = mpicc -cpp -O3 -DINTELMKL 
 
@@ -25,7 +25,7 @@ FFLAG = $(OFLAG) $(WFLAG)
 LFLAG = $(OFLAG)
 
 # ARPACK LIBRARY
-ARPACK=/Users/user/quan/work/workplace/ARPACK/libarpack_MAC.a
+ARPACK=/mnt/lvm/group1/software/spack/opt/spack/linux-debian12-zen3/oneapi-2024.2.0/arpack-ng-3.9.0-57dv5a3it4iyrnmpsmjjlnqehlybqmok/lib/libarpack.so
 
 # blas and lapack libraries
 # static linking
